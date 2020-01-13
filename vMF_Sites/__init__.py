@@ -23,16 +23,14 @@ def a95inv(A95,N):
 def input_frame(X):
 
     input_df = pd.DataFrame({
-        'Dec [deg.]' : pd.Series([np.nan],index=list(range(1)),dtype='float32'),
-        'Inc [deg.]' : pd.Series([np.nan],index=list(range(1)),dtype='float32'),
-        'N' : pd.Series([0],index=list(range(1)),dtype='int'),
-        'A95 [deg.]' : pd.Series([np.nan],index=list(range(1)),dtype='float32')})
+        '(A) Dec [deg.]' : pd.Series([np.nan],index=list(range(1)),dtype='float32'),
+        '(B) Inc [deg.]' : pd.Series([np.nan],index=list(range(1)),dtype='float32'),
+        '(C) N' : pd.Series([0],index=list(range(1)),dtype='int'),
+        '(D) α95 [deg.]' : pd.Series([np.nan],index=list(range(1)),dtype='float32')})
     
-    #input_df['Anchored'] = input_df['n'] == 0
     input_widget = qgrid.show_grid(input_df, show_toolbar=True)
     input_widget.layout = ipyw.Layout(width='65%')
 
-    #X = {}
     X['input_widget'] = input_widget
     display(X['input_widget'])
     
@@ -42,10 +40,10 @@ def input_frame(X):
 def read_data(X):
     
     final_df = X['input_widget'].get_changed_df()
-    X['dec'] = np.array(final_df['Dec [deg.]'])
-    X['inc'] = np.array(final_df['Inc [deg.]'])
-    X['a95'] = np.array(final_df['A95 [deg.]'])
-    X['n'] = np.array(final_df['N'])
+    X['dec'] = np.array(final_df['(A) Dec [deg.]'])
+    X['inc'] = np.array(final_df['(B) Inc [deg.]'])
+    X['a95'] = np.array(final_df['(D) α95 [deg.]'])
+    X['n'] = np.array(final_df['(C) N'])
     X['N'] = len(X['dec'])
     X['R'] = a95inv(X['a95'],X['n'])
     X['k'] = A3inv(X['R'],X['n'])
