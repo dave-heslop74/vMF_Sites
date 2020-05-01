@@ -13,7 +13,7 @@ There is a short YouTube tutorial <a href="https://youtu.be/ecHZxUA6-Yg" target=
 ### Running locally
 The *vMF_Sites* package can be installed locally using the ```pip``` command:
 
-```pip install git+https://github.com/dave-heslop74/vMF-Specimens.git```
+```pip install git+https://github.com/dave-heslop74/vMF_Sites.git```
 
 Package dependencies can be found in the ```requirements.txt``` file included in this repository and the ```postBuild``` file provides commands to setup the interactive notebook.
 
