@@ -6,7 +6,7 @@ D. Heslop & A. P. Roberts (2020). Uncertainty propagation in hierarchical paleom
 The package provides Python (v3.7) code and an interactive Jupyter notebook to perform uncertainty propagation when averaging Fisher (1953) distributions, such as those that are used to represent paleomagnetic site mean directions. 
 
 ### Running on the Cloud
-The simplest way to run the calculation notebook is on the Binder cloud, using this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dave-heslop74/vMF_Sites/master?urlpath=%2Fapps%2FvMF_Sites.ipynb)
+The simplest way to run the interactive Jupyter notebook is on the Binder cloud, using this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dave-heslop74/vMF_Sites/master?urlpath=%2Fapps%2FvMF_Sites.ipynb)
 
 ### Running locally
 The *vMF_Sites* package can be installed locally using the ```pip``` command:
